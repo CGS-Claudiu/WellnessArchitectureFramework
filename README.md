@@ -1,5 +1,4 @@
 # Wellness Architecture Framework website
-changes additional
 
 ## Table of Contents
 
