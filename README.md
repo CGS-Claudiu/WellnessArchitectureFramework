@@ -1,5 +1,5 @@
 # Wellness Architecture Framework website
-another one
+TBD
 
 ## Table of Contents
 
@@ -19,3 +19,9 @@ Describe the purpose of your website or application, who it’s for, and what it
 
 ## Installation
 
+## Usage
+
+## Licence
+
+## Contact
+Claudiu Grecu - claudiu.grecu@gmail.com
