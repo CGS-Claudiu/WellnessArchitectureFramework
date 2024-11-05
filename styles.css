@@ -46,31 +46,6 @@ header p {
     text-align: left;                                /* Ensure left alignment */
 }
 
-/* Navigation Bar Styling */
-nav {
-    background-color: #eee;
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #007BFF; /* Change color on hover for effect */
-}
 
 /* Main content styling */
 main {
@@ -184,9 +159,10 @@ footer {
 
 .tab-intro p {
     font-size: 16px;
-    color: #666;
+    color: #666666;
     margin: 0;
 }
+
 
 /* Tab content */
 .tab-content {
@@ -194,9 +170,16 @@ footer {
     text-align: center;
 }
 
-.tab-content img {
+/* .tab-content img {
     width: 100%;
     max-width: 120px;
+    border-radius: 10px;
+} */
+
+.tab-content img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
