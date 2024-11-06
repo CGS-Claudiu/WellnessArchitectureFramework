@@ -168,6 +168,7 @@ footer {
 .tab-content {
     display: none;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 /* .tab-content img {
