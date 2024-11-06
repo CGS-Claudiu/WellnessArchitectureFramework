@@ -24,26 +24,27 @@ header {
 
 
 .header h1 {
-    font-size: 2.5em;
+    font-size: 3.5em;
+    padding-left: 60px;
     margin-bottom: 10px;
-    max-width: 50%; /* Limit width to 60% */
-    margin-left: 0%; /* Start from the same left side for both title and summary */
+    white-space: nowrap;
 }
 
 /* Summary styling, aligned to title width with slight overflow */
 .summary {
     font-size: 1.1em;
-    color: #e0e0e0;
-    max-width: 50%; /* Set width to 20% more than title width */
-    margin-left: 0%; /* Align to the same starting point as the title */
+    color: #000000;
+    max-width: 90%; /* Set width to 70% more than title width */
+    margin: 0 auto;
     line-height: 1.6;
-    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
 }
 header p {
     color: #fff;
     font-size: 1.1em;
     margin: 0;
-    text-align: left;                                /* Ensure left alignment */
+    text-align: center; 
 }
 
 
@@ -208,7 +209,7 @@ footer {
 
 
 .learn-more-link {
-    color: #ffcc00; /* Set the default color */
+    color: #136f03; /* Set the default color */
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Make the text bold */
     transition: color 0.3s, background-color 0.3s; /* Smooth transition */
@@ -216,7 +217,7 @@ footer {
 
 .learn-more-link:hover {
     color: #ffffff; /* Change color on hover */
-    background-color: #ffcc00; /* Add a background color on hover */
+    background-color: #00ff1a; /* Add a background color on hover */
     padding: 5px 10px; /* Add padding on hover to create a button effect */
     border-radius: 5px; /* Rounded corners on hover */
 }
