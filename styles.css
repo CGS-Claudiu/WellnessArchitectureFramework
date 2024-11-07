@@ -118,6 +118,7 @@ footer {
 }
 
 .tab-button {
+    font-size: clamp(0.8em, 2vw, 1.2em); /* Adjusts font size based on screen width */
     flex: 1;
     padding: 15px;
     text-align: center;
