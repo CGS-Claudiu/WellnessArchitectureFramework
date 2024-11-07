@@ -83,19 +83,24 @@ footer {
     }
 }
 
-@media (max-width: 480px) {   /* Mobile Phones */
-    header {
-        padding: 40px 10px;
-        height: 250px;        /* Adjust height for mobile screens */
-        background-position: top;  /* Adjust image position for a better fit */
+@media (max-width: 480px) {
+    .tabs {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 10px;
     }
-    header h1 {
-        font-size: 1.5em;     /* Smaller font size on mobile */
-    }
-    header p {
-        font-size: 1em;
+
+    .tab-button {
+        flex: none;
+        min-width: 120px;
+        font-size: 0.9em;
+        padding: 10px 5px;
     }
 }
+
+
+
 /* Outer background color */
 .outer-background {
     background-color: #e0f0df; /* Light green background */
