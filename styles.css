@@ -24,10 +24,10 @@ header {
 
 
 .header h1 {
-    font-size: 3.5em;
+    font-size: clamp(1.5em, 5vw, 3.5em);
     padding-left: 60px;
     margin-bottom: 10px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 /* Summary styling, aligned to title width with slight overflow */
