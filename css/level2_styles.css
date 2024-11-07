@@ -36,19 +36,19 @@
 
 /* Article Styling */
 article h1 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     margin-top: 1.5rem;
     color: #4a7c3a;
 }
 
 article h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     margin-top: 1.5rem;
     color: #4a7c3a;
 }
 
 article h3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin-top: 1rem;
     color: #333;
 }
