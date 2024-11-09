@@ -83,7 +83,7 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .tabs {
         display: flex;
         overflow-x: auto;
@@ -97,8 +97,17 @@ footer {
         font-size: 0.9em;
         padding: 10px 5px;
     }
-}
+} */
 
+@media (max-width: 480px) {
+    .tabs {
+        flex-direction: column;
+    }
+    .tab-button {
+        width: 100%;
+        text-align: center;
+    }
+}
 
 
 /* Outer background color */
