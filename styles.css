@@ -139,6 +139,7 @@ footer {
     font-weight: bold;
     cursor: pointer;
     background-color: #d0e2e1;
+    border: 2px solid #b0c4c3; /* Border color for each tab */
     color: #000000; /* Black text color for unselected tabs */
     transition: background-color 0.3s, color 0.3s;
     border-top-left-radius: 15px; /* Rounded left corner for the first tab */
