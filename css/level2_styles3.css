@@ -1,0 +1,132 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Intro Header Styling */
+.intro-header {
+    background-color: #4a7c3a;
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem;
+}
+
+.intro-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.intro-header .intro-description {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Page Container */
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Collapsible Section Styling */
+.collapsible-section {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+}
+
+.collapsible-header {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4a90e2;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible-content {
+    padding: 1rem;
+    display: none;
+}
+
+.collapsible-section.expanded .collapsible-content {
+    display: block;
+}
+
+/* Info Card Styling */
+.info-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.2s;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+}
+
+.info-card-icon {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-right: 1rem;
+}
+
+.info-card-content h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.info-card-content p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Main Content Styling */
+.main-content h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Conclusion Section */
+.conclusion {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.conclusion h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a7c3a;
+    margin-bottom: 1rem;
+}
+
+.conclusion p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #4a7c3a;
+    color: #ffffff;
+    margin-top: 2rem;
+}
