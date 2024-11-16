@@ -1,0 +1,205 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Green Header Section */
+.blog-header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #6bbf59;
+    color: #fff;
+}
+
+.blog-header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blog-header p.intro {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Main Content and Sidebar Layout */
+.content {
+    display: flex;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.main-content {
+    flex: 3;
+}
+
+/* Centered Image Styling */
+.centered-image {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem auto;
+}
+
+.centered-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Article Styling */
+article h1 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: #4a7c3a;
+}
+
+article h2 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    color: #4a7c3a;
+}
+
+article p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 1rem;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.sidebar h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #329f1a;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+.blog-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #6bbf59;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Info Card Styling */
+.info-card {
+    display: flex;
+    /* align-items: center; */
+    align-items: flex-start; /* Align content closer together */
+    padding: 0.8rem 1rem;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.8rem;
+    transition: transform 0.2s;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+}
+
+.info-card-icon {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-right: 1rem;
+}
+
+.info-card-content h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.info-card-content p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Collapsible Section Styling */
+.collapsible-section {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+    padding: 0.5rem; /* Adjust padding to reduce space */
+}
+
+/* .collapsible-header {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4a90e2;
+    cursor: pointer;
+} */
+
+.collapsible-content {
+    padding: 0.5rem 1rem; /* Adjust padding to reduce space */
+    display: none; /* Hidden by default */
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0; /* Ensure there's no extra space above */
+    line-height: 1; /* Tweak line-height for better readability */
+}
+
+.collapsible-section.active .collapsible-content {
+    display: block; /* Shown when expanded */
+    margin-top: 0; /* Remove extra spacing above content */
+}
+
+/* Collapsible Header with Arrow Icon */
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Reduce padding to tighten space */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4a90e2;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 0; /* Remove unnecessary margin below header */
+}
+
+/* Arrow Icon Styling */
+.arrow-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+/* Rotate Arrow for Active State */
+.collapsible-section.active .arrow-icon {
+    transform: rotate(180deg); /* Downward arrow when expanded */
+}
