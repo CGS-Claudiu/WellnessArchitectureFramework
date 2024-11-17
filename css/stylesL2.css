@@ -193,14 +193,6 @@ article p {
     padding: 0.5rem; /* Adjust padding to reduce space */
 }
 
-/* .collapsible-header {
-    padding: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #4a90e2;
-    cursor: pointer;
-} */
-
 .collapsible-content {
     padding: 0.5rem 1rem; /* Adjust padding to reduce space */
     display: none; /* Hidden by default */
@@ -208,6 +200,9 @@ article p {
     color: #555;
     margin-top: 0; /* Ensure there's no extra space above */
     line-height: 1.5; /* Tweak line-height for better readability */
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    max-height: 0;
 }
 
 .collapsible-section.active .collapsible-content {
