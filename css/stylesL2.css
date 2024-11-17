@@ -195,7 +195,7 @@ article p {
 
 .collapsible-content {
     padding: 0.5rem 1rem; /* Adjust padding to reduce space */
-    display: none; /* Hidden by default */
+    display: none;
     font-size: 0.9rem;
     color: #555;
     margin-top: 0; /* Ensure there's no extra space above */
@@ -206,8 +206,19 @@ article p {
 }
 
 .collapsible-section.active .collapsible-content {
-    display: block; /* Shown when expanded */
     margin-top: 0; /* Remove extra spacing above content */
+    display: block !important; /* Use !important to ensure it overrides any inline styles */
+    max-height: none; /* Remove max-height restriction for initial state */}
+}
+
+/* Add this for smooth animations during later toggles */
+.collapsible-section .collapsible-content.animatable {
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.collapsible-section.active .collapsible-content.animatable {
+    max-height: 1000px; /* Adjust based on your content */
 }
 
 /* Collapsible Header with Arrow Icon */
