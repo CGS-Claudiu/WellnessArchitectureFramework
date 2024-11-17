@@ -31,6 +31,7 @@
     max-width: 1200px;
     margin: 0 auto;
     gap: 2rem;
+    overflow: visible;
 }
 
 .main-content {
@@ -73,11 +74,39 @@ article p {
 }
 
 /* Sidebar Styling */
+/* .sidebar {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    position: sticky; /* Make it sticky */
+    top: 10px; /* Distance from the top of the viewport */
+}
+
+@supports not (position: sticky) {
+    .sidebar {
+        position: fixed;
+        top: 10px;
+    }
+} */
+
+.content {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: visible; /* Allow sticky to work */
+    align-items: flex-start; /* Ensure proper alignment */
+}
+
 .sidebar {
     flex: 1;
     background-color: #f5f5f5;
     padding: 1rem;
     border-radius: 8px;
+    position: sticky;
+    top: 10px; /* Distance from the top of the viewport */
 }
 
 .sidebar h4 {

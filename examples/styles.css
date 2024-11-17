@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.blog-header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #6bbf59;
+    color: #fff;
+}
+
+.blog-header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blog-header p.intro {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    position: relative;  /* Added for proper sidebar positioning */
+}
+
+/* Main Content */
+.main-content {
+    flex: 3;
+}
+
+.main-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.main-content h2 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.main-content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.main-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.main-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    height: fit-content;  /* Added to ensure proper sticky behavior */
+    max-height: calc(100vh - 40px);  /* Prevent overflow */
+    overflow-y: auto;  /* Allow scrolling if content is too long */
+}
+
+.sidebar h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #329f1a;
+    display: block;  /* Better touch targets */
+    padding: 0.25rem 0;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+.blog-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #6bbf59;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        position: static;
+        margin-top: 2rem;
+    }
+}
