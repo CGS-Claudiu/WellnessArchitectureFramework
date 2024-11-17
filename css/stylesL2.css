@@ -210,13 +210,40 @@
     margin-bottom: 0; /* Remove unnecessary margin below header */
 }
 
-/* Arrow Icon Styling */
+/* Option 1: CSS Arrow (more customizable) */
 .arrow-icon {
-    font-size: 1rem;
-    transition: transform 0.3s ease; /* Smooth rotation */
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-/* Rotate Arrow for Active State */
-.collapsible-section.active .arrow-icon {
-    transform: rotate(180deg); /* Downward arrow when expanded */
+.arrow-icon::before,
+.arrow-icon::after {
+    content: '';
+    position: absolute;
+    background-color: #4a90e2;
+    width: 12px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+}
+
+.arrow-icon::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+    left: calc(50% - 3px);
+}
+
+.arrow-icon::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    left: calc(50% + 3px);
+}
+
+/* Rotate for active state */
+.collapsible-section.active .arrow-icon::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.collapsible-section.active .arrow-icon::after {
+    transform: translate(-50%, -50%) rotate(45deg);
 }
