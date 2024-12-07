@@ -242,3 +242,250 @@ footer {
     color: #333333; /* Darker color when clicking */
     background-color: #ffe680; /* Slightly different background color */
 }
+
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1000;
+    padding: 10px 20px;
+    display: flex; /* Enables horizontal layout */
+    align-items: center; /* Centers logo and menu vertically */
+}
+
+.logo {
+    margin-right: 20px; /* Spacing between logo and menu */
+}
+
+.logo img {
+    height: 60px; /* Adjust logo height as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures proper rendering */
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap; /* Prevents wrapping onto multiple lines */
+}
+
+.menu-item {
+    position: relative;
+    margin-right: 20px; /* Adds spacing between menu items */
+    text-align: center; /* Center-aligns the text in each item */
+    flex: 0; /* Ensures items take up only as much space as needed */
+    white-space: nowrap; /* Prevents text wrapping in menu items */
+}
+
+.menu-item > a {
+    display: block; /* Ensures the anchor tag fills the menu item space */
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 15px; /* Adds consistent padding for clickable areas */
+    transition: color 0.3s, background-color 0.3s;
+    white-space: nowrap; /* Ensures menu text stays on a single line */
+}
+
+.menu-item > a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    color: #f4dcde;
+    border-radius: 4px;
+}
+
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Places submenu below the parent menu item */
+    left: 50%; /* Start submenu at the horizontal center of the parent */
+    transform: translateX(-50%); /* Centers submenu directly under parent */
+    min-width: 100%; /* Match the width of the parent menu item */
+    background: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+}
+
+.submenu li {
+    padding: 5px 20px;
+    white-space: nowrap; /* Ensures submenu items stay on a single line */
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #355c7d;
+    font-size: 1.1em;
+    display: block;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Prevents wrapping in submenu items */
+}
+
+.submenu li a:hover {
+    background: #efe3e4;
+    color: #141111;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.navigation.scrolled {
+    background: #ffffff;
+    color: #355c7d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navigation.scrolled a {
+    color: #355c7d;
+}
+
+.contact-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #617c64;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #355c7d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #f67280;
+}
+
+.disclaimer-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.disclaimer-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.disclaimer-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.disclaimer-section h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.disclaimer-section a {
+    color: #355c7d;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.disclaimer-section a:hover {
+    color: #f67280;
+}
+.privacy-policy-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.privacy-policy-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.privacy-policy-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.privacy-policy-section h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.privacy-policy-section ul {
+    list-style: disc;
+    margin: 10px 0 20px 40px;
+    color: #555;
+}
+
+.privacy-policy-section a {
+    color: #355c7d;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.privacy-policy-section a:hover {
+    color: #f67280;
+}

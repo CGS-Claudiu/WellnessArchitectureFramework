@@ -24,3 +24,18 @@ function showTabContent(tabId) {
 document.addEventListener('DOMContentLoaded', () => {
     showTabContent('lifestyle'); // Display the 'insights' tab by default
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector('.navigation');
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+        const headerHeight = header.offsetHeight;
+        if (window.scrollY > headerHeight) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+});
+
