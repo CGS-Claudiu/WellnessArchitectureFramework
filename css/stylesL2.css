@@ -51,10 +51,17 @@ article h2 {
     margin-top: 0.5rem;
 }
 
+/* General paragraph spacing */
 article p {
-    margin-bottom: 2rem;
-    line-height: 1.5; /* Increased for better text readability */    
+    margin-bottom: 2rem; /* Apply standard margin below all paragraphs */
+    line-height: 1.5;    /* Ensure readability */
 }
+
+/* Special rule for paragraphs directly preceding a list */
+article p + ul {
+    margin-top: -2rem;   /* Adjusts for potential space from the previous element */
+}
+
 
 .main-content {
     flex: 3;
