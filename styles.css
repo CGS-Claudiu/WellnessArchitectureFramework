@@ -569,21 +569,16 @@ footer {
     .menu {
         display: none; /* Hide desktop menu */
     }
-
-    .mobile-menu {
-        display: none; /* Hide initially */
-    }
-}
-
-/* Show Logo Only on Desktop */
-@media (max-width: 768px) {
-    .logo {
-        display: none; /* Hide logo for mobile */
-    }
 }
 
 @media (min-width: 769px) {
     .logo {
         display: block; /* Show logo for desktop */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        display: none; /* Hide logo for mobile */
     }
 }
