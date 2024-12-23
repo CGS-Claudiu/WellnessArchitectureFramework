@@ -39,3 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// added for hamburger menu
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Toggle the mobile menu visibility
+    menuToggle.addEventListener('click', () => {
+        const isMenuVisible = mobileMenu.style.display === 'block';
+        mobileMenu.style.display = isMenuVisible ? 'none' : 'block';
+    });
+});
