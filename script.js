@@ -50,3 +50,22 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.style.display = isMenuVisible ? 'none' : 'block';
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Toggle the mobile menu visibility
+    menuToggle.addEventListener('click', () => {
+        const isMenuVisible = mobileMenu.style.display === 'block';
+        mobileMenu.style.display = isMenuVisible ? 'none' : 'block';
+    });
+
+    // Close the mobile menu if clicked outside
+    document.addEventListener('click', (e) => {
+        if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.style.display = 'none';
+        }
+    });
+});
+
