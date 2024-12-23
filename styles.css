@@ -492,9 +492,11 @@ footer {
 
 /* Hamburger Menu Button Styling */
 .hamburger-menu {
-    display: none; /* Hidden by default */
-    position: relative;
-    z-index: 1001;
+    display: none; /* Hidden by default for larger screens */
+    position: fixed;
+    top: 20px;
+    left: 20px; /* Position to the left */
+    z-index: 1002; /* Higher than the menu */
 }
 
 #menu-toggle {
@@ -507,6 +509,7 @@ footer {
     border: none;
     cursor: pointer;
     padding: 0;
+    z-index: 1002;
 }
 
 #menu-toggle .bar {
@@ -521,64 +524,63 @@ footer {
     background: #d0e2e1; /* Subtle hover effect */
 }
 
-/* Mobile Menu Styling */
-.mobile-menu {
+/* Fullscreen Mobile Menu Styling */
+.full-screen-menu {
     display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f1a22b; /* Match the background color in your image */
+    color: #000; /* Text color */
+    z-index: 1001;
     flex-direction: column;
-    background-color: white; /* White background */
-    position: absolute;
-    top: 60px; /* Adjusted to appear just below the hamburger menu */
-    right: 10px; /* Right-aligned under the hamburger button */
-    width: 200px;
-    border: 1px solid #ddd;
-    z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
-    border-radius: 8px; /* Rounded corners for a clean look */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
 }
 
-.mobile-menu li {
-    margin: 10px 0;
+.full-screen-menu ul {
+    list-style: none;
+    padding: 0;
 }
 
-.mobile-menu a {
-    padding: 10px 20px;
-    display: block;
-    color: #355c7d;
+.full-screen-menu ul li {
+    margin: 20px 0;
+}
+
+.full-screen-menu ul li a {
+    font-size: 1.5em;
+    color: #000000; /* Black text */
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.mobile-menu a:hover {
-    background-color: #d0e2e1;
-    color: #141111;
+.full-screen-menu ul li a:hover {
+    color: #ffffff; /* Highlight on hover */
 }
 
-/* Navigation Bar Background on Scroll */
-.navigation.scrolled {
-    background-color: black; /* Black background on scroll */
-    transition: background-color 0.3s ease;
+.full-screen-menu #menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
 }
 
 /* Show Hamburger Menu on Mobile */
 @media (max-width: 768px) {
     .hamburger-menu {
-        display: flex; /* Show hamburger menu */
+        display: flex; /* Show hamburger menu on smaller screens */
     }
 
     .menu {
         display: none; /* Hide desktop menu */
-    }
-}
-
-@media (min-width: 769px) {
-    .logo {
-        display: block; /* Show logo for desktop */
-    }
-}
-
-@media (max-width: 768px) {
-    .logo {
-        display: none; /* Hide logo for mobile */
     }
 }

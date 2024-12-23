@@ -43,25 +43,25 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const menuClose = document.getElementById('menu-close');
 
-    // Toggle the mobile menu visibility
-    menuToggle.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent the click event from propagating
-        const isMenuVisible = mobileMenu.style.display === 'block';
-        mobileMenu.style.display = isMenuVisible ? 'none' : 'block';
+    // Open the mobile menu
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.style.display = 'flex'; // Show the full-screen menu
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
     });
 
-    // Close the mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-            mobileMenu.style.display = 'none';
-        }
+    // Close the mobile menu
+    menuClose.addEventListener('click', () => {
+        mobileMenu.style.display = 'none'; // Hide the menu
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
     });
 
-    // Add background color to navigation on scroll
-    const navigation = document.querySelector('.navigation');
+    // Hide menu when scrolling
     window.addEventListener('scroll', () => {
-        navigation.style.backgroundColor =
-            window.scrollY > 10 ? 'black' : 'transparent';
+        if (mobileMenu.style.display === 'flex') {
+            mobileMenu.style.display = 'none'; // Hide the menu
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
     });
 });
