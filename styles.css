@@ -492,7 +492,7 @@ footer {
 
 /* Hamburger Menu Button Styling */
 .hamburger-menu {
-    display: none; /* Hidden by default, will show on small screens */
+    display: none; /* Hidden by default */
     position: relative;
     z-index: 1001;
 }
@@ -512,9 +512,9 @@ footer {
 #menu-toggle .bar {
     width: 100%;
     height: 4px;
-    /* background: #355c7d; */
-    background: #ffffff; /* White bars for better contrast */
+    background: #ffffff; /* White bars for visibility */
     border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 #menu-toggle:hover .bar {
@@ -525,9 +525,9 @@ footer {
 .mobile-menu {
     display: none; /* Initially hidden */
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: white; /* White background */
     position: absolute;
-    top: 60px; /* Adjust based on header height */
+    top: 60px; /* Adjusted to appear just below the hamburger menu */
     right: 10px; /* Right-aligned under the hamburger button */
     width: 200px;
     border: 1px solid #ddd;
@@ -546,6 +546,7 @@ footer {
     display: block;
     color: #355c7d;
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .mobile-menu a:hover {
@@ -553,27 +554,36 @@ footer {
     color: #141111;
 }
 
-/* Media Query to Show Hamburger Menu */
+/* Navigation Bar Background on Scroll */
+.navigation.scrolled {
+    background-color: black; /* Black background on scroll */
+    transition: background-color 0.3s ease;
+}
+
+/* Show Hamburger Menu on Mobile */
 @media (max-width: 768px) {
-    .logo {
-        display: none; /* Hide the logo for smaller screens */
-    }
     .hamburger-menu {
-        display: flex;
+        display: flex; /* Show hamburger menu */
     }
 
     .menu {
-        display: none; /* Hide the desktop menu */
+        display: none; /* Hide desktop menu */
     }
 
     .mobile-menu {
-        display: none; /* Remains hidden initially */
+        display: none; /* Hide initially */
     }
 }
 
-/* Keep the logo visible on larger screens */
+/* Show Logo Only on Desktop */
+@media (max-width: 768px) {
+    .logo {
+        display: none; /* Hide logo for mobile */
+    }
+}
+
 @media (min-width: 769px) {
     .logo {
-        display: block; /* Show the logo for larger screens */
+        display: block; /* Show logo for desktop */
     }
 }

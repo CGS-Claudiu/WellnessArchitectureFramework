@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const navigation = document.querySelector('.navigation');
 
     // Toggle the mobile menu visibility
     menuToggle.addEventListener('click', () => {
@@ -61,11 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.style.display = isMenuVisible ? 'none' : 'block';
     });
 
-    // Close the mobile menu if clicked outside
+    // Close the mobile menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
             mobileMenu.style.display = 'none';
         }
     });
-});
 
+    // Add background color to navigation on scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+            navigation.style.backgroundColor = 'black'; // Set the background color to black
+        } else {
+            navigation.style.backgroundColor = 'transparent'; // Transparent when not scrolling
+        }
+    });
+});
