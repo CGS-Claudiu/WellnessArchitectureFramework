@@ -562,6 +562,31 @@ footer {
     background-color: #f1f1f1; /* Subtle hover effect */
 }
 
+/* Close Button Styling */
+#menu-close {
+    position: absolute;
+    top: 10px; /* Adjust to fit nicely */
+    right: 10px; /* Align to the right */
+    background: #fff; /* White background for contrast */
+    color: #000; /* Black text color */
+    border: 2px solid #ccc; /* Subtle border */
+    border-radius: 50%; /* Round button */
+    font-size: 1.5em; /* Larger font for better visibility */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1002; /* Ensure it stays above the menu */
+}
+
+#menu-close:hover {
+    background: #f1f1f1; /* Slightly darker background on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
 /* Show Hamburger Menu on Mobile */
 @media (max-width: 768px) {
     .hamburger-menu {
