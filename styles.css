@@ -490,6 +490,14 @@ footer {
     color: #f67280;
 }
 
+audio {
+    display: block;
+    margin-top: 10px;
+    width: 300px; /* Adjust the width as needed */
+    height: 25px; /* Slim down the player height */
+    border: none;
+}
+
 /* Hamburger Menu Button Styling */
 .hamburger-menu {
     display: none; /* Hidden by default for larger screens */
